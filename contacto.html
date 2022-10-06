@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa2e840258.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script> src= </script>
+    <title>pagina</title>
+</head>
+<body>
+    <header>
+        <!--BARRA DE NAVEGACION-->
+
+        <nav class="nav">
+            <div class="logo">EL MUNDO A TRAVES DE NUESTROS OJOS</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="blogdeviaje.html">Blog de viajes</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="newsletter.html">NEWSLETTER</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--formulario-->
+    <main>
+        <div class="menu">
+            <ul class="divisor">
+                <h1 class="titulo">El Mundo a través de nuestros OJOS</h1>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label for="validation02" class="col-sm-4 col-form-label">Nombre</label>
+                    <div class="col">
+                        <input type="nombre" class="form-control" id="inputNombre" id="validation02" placeholder="Ingresa tu nombre" required>
+                    </div>   
+                </div>
+                <div class="col">
+                    <label for="inputEmail3" class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                    </div>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col">
+                    <label for="validation02" class="col-sm-4 col-form-label">País a visitar</label>
+                    <div class="col">
+                        <!--<input type="text" class="form-control is-invalid" id="validation02" placeholder="Ingresa el país a visitar">-->
+                        <input type="text" class="form-control" id="validation02" placeholder="Ingresa el país a visitar">
+                    </div>    
+                </div>
+                <div class="col">
+                    <label for="inputEmail3"  class="col-sm-4 col-form-label">Ciudad a visitar</label>
+                    <div class="col-sm-6">
+                       <input type="text" class="form-control" id="inputEmail3" placeholder="Ingresa la ciudad a visitar">
+                    </div>   
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col">
+                  <label for="checkbox"  class="col-sm-4 col-form-label">Te hospedarías en:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="defaultCheck1" value="Hotel">
+                        <label class="form-check-label" for="defaultCheck1">Hotel</label>
+                    </div>    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Hostel" onChange="check()">
+                        <label class="form-check-label" for="inlineCheckbox2">Hostel</label>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="room" id="option1" value="option1" disabled>
+                                <label class="form-check-label" for="inlineCheckbox2">Habitación Privada</label>
+                            </div>   
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="room" id="option2" value="option2" disabled>
+                                <label class="form-check-label" for="inlineCheckbox3">Habitación Compartida</label>
+                            </div>    
+                        </div>    
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        <label class="form-check-label" for="inlineCheckbox3">Camping</label>
+                    </div>                           
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino</label>
+                    <div class="col">
+                        <textarea class="form-control" type="text" class="form-control is-invalid" rows="5" id="validation02" placeholder="Describe" required></textarea>
+                    </div>    
+                
+                </div>    
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                   <button type="submit" class="btn btn-primary">Enviar</button>  
+                </div>
+            </div>    
+            </div>
+        </div>         
+    </main>    
+
+<!--FOOTER-->
+    <footer>
+        <div class="container_redes">
+            <a href="https://www.facebook.com/" class="icon"></a>
+            <a href="https://www.instagram.com/" class="icon"></a>
+            <a href="https://www.twitter.com/" class="icon"></a>
+        </div>
+        <ul class="footer_menu_container">
+            <li class="menu_item">Legal</li>
+            <li class="menu_item">Cookies</li>
+            <li class="menu_item">Privacidad</li>
+        </ul>
+        <span class="copyright">&copy;EL MUNDO A TRAVES DE NUESTROS OJOS - 2022 | Todos los derechos reservados.</span>
+    </footer>
+
+    <div class="scrol"></div>
+    <script src="menu.js"> </script>
+
+</body>
+</html>
