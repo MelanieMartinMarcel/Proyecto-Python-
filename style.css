@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/**HEADER**/
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image:url(img/panel.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+/**MENU DE NAVEGACION **/
+.nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    transition: all 0.5s ease;
+    z-index: 20;
+    
+}
+.nav.active{
+    background: rgb(0, 0, 0);
+    padding: 5px;
+}
+.nav.active .logo, .nav.active a, .nav.active .menu-btn{
+    color: #fff;
+}
+.nav.active a:hover{
+    background: #000;
+    color: #fff;
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 100;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    margin: 15px;
+    font-size: 20px;
+}
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.menu li a:hover{
+    padding: 5px 10px;
+    background: #fff;
+    color:  #000;
+    border-radius: 15px;
+}
+.menu-btn{
+    color: #fff;
+    font-size: 20px;
+    display: none;
+}
+
+/**MENU DE NAVEGACION RESPONSIVE**/
+@media screen and (max-width:1024px){
+    .menu-btn{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 250px;
+        height: 100vh;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5 ease;
+        transform: translatex(-100%);
+    }
+    .menu li{
+        margin:15px 0;
+    }
+    .menu.active{
+        transform: translate(0);
+    }
+}
+.scrol{
+    height: 100px;
+}
+
+/***MAIN***/
+
+#main{
+    width: 100%;
+}
+
+/**SECCION: nosotras**/
+.about {
+   width: 100%;
+}
+
+.about__us{
+    width: 80%;
+    margin: 100px auto;
+}
+
+.about__us h2{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: normal;
+    color:#000;
+}
+
+.about__us p{
+    font-size: 19px;
+    color:#000;
+    line-height: 40px;
+    margin:30px 0px;
+    text-align: center;
+}
+
+.about .panel-img{
+    width: 50%;
+    margin:auto;
+}
+
+.about .panel-img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform:rotate(1deg);
+    cursor: pointer;
+}
+
+.about .panel-img img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform:rotate(-2.5deg);
+    cursor: pointer;
+}
+
+/**EFECTO PARALLAX - SECCION: EL MUNDO**/
+
+.ruta{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin:100px 0px;
+}
+
+.ruta .figure-img{
+    background: url(img/panel4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    background-color:rgba(0,0,0,0.5);
+    background-blend-mode: soft-light;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ruta .figure-img h4{
+    width: 80%;
+    color:#fff;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 60px;
+}
+/*** LINEAS DISEÑO ***/
+
+.skew-arriba{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-width: 5vh 100vw 0 0;
+	border-style: solid;
+	border-color: #fff transparent transparent transparent;
+	z-index: 10;
+}
+/** DEJO POR SI SE DESEA AGREGAR EN OTRA PARTE 
+
+.skew-abajo{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-width: 0 0 5vh 100vw;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+}**/
+
+/**SECCION: GALERIA DE CIUDADES**/
+
+.imagen_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.media {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.media:hover {
+  cursor: pointer;
+}
+
+.fondo {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .fondo {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+  z-index: -1;
+  margin: auto;
+  transform: scale(1);
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+
+.detalle_img {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  z-index: 4;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .detalle_img {
+  top: 40%;
+  opacity: 1;
+}
+
+/**RESPONSIVE **/
+
+@media only screen and (max-width: 900px) {
+  .media {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+/** PAGINA: BLOG DE VIAJES **/
+
+.container_blog{
+    width: 100%;
+    margin: 100px auto;
+}
+
+.container_blog h2{
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: normal;
+        color:#000;
+    }
+    
+.container_blog p{
+        font-size: 19px;
+        color:#000;
+        line-height: 30px;
+        margin: auto 140px;
+        text-align:justify;
+    
+}
+
+.container_blog img{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+}
+    
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container_redes, .footer_menu_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+    background-image: url(img/facebook.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+.icon:hover{
+    background-color: #fff;
+    filter: invert(1);
+}
+.icon:nth-of-type(2){
+    background-image: url(img/instagram.png);
+}
+.icon:nth-of-type(3){
+    background-image: url(img/twitter.png);
+}
+
+.footer_menu_container{
+    list-style-type: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.menu_item{
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.menu_item:hover{
+    opacity: 1;
+}
+.copyright{
+    color: #fff;
+    opacity: 0.3;
+    text-align: center;
+}
+
