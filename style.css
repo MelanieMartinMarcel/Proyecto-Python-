@@ -320,6 +320,22 @@ img {
     cursor: pointer;
     display: block;
 }
+
+/*seccion destinos - mapa*/
+/* Tamaño del elemento div que contiene el mapa */
+
+h3{
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+}
+
+#map {
+    height: 700px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
     
 /*FOOTER*/
 

@@ -7,8 +7,8 @@
     <script src="https://kit.fontawesome.com/aa2e840258.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script> src= </script>
-    <title>pagina</title>
+    <script type="module" src="./index.js"></script>
+    <title>destinos</title>
 </head>
 <body>
     <header>
@@ -30,6 +30,11 @@
     </header>
 
    <!--REALIZAR MAPA INTERACTIVO -->
+   <section class="container_map">
+    <h3>LUGARES VISITADOS</h3>
+    <!--El div para el mapa -->
+    <div id="map"></div>
+   </section>
 
 <!--FOOTER-->
     <footer>
@@ -48,6 +53,9 @@
 
     
     <script src="menu.js"> </script>
-
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4ea3ng38OF2ICqqikVYjnI2TmGiHLoL0&callback=initMap&v=weekly"
+    defer
+  ></script>
 </body>
 </html>
