@@ -292,7 +292,7 @@ img {
 
 .container_blog{
     width: 100%;
-    margin: 100px auto;
+    margin: 70px auto;
 }
 
 .container_blog h2{
@@ -307,7 +307,7 @@ img {
         font-size: 19px;
         color:#000;
         line-height: 30px;
-        margin: auto 140px;
+        margin: auto 190px;
         text-align:justify;
     
 }
@@ -323,6 +323,11 @@ img {
 
 /*seccion destinos - mapa*/
 /* Tamaño del elemento div que contiene el mapa */
+
+.container_map{
+    width: 100%;
+    margin: 70px auto;
+}
 
 h3{
     text-align: center;
