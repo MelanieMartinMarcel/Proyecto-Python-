@@ -13,18 +13,22 @@ const menu = document.querySelector('.menu');
     // Se inicializa y agrega el mapa
 function initMap() {
     // ubicacion principal:
-    const center = {lat:-38.00042, lng:-57.5562};
+    const center = {lat:-22.90642, lng:-43.18223};
 
     let lugares = [
-        {lat:-38.00042, lng:-57.5562},
-        {lat:-34.61315, lng:-58.37723},
-        {lat:-32.89084, lng:-68.82717},
-        {lat: -0.1920852525324805, lng: -78.50612664454852},
-        {lat:-22.904041770908364, lng:-43.207422019644596}
+        {lat:-22.90642, lng:-43.18223}, //Rio de Janeiro
+        {lat:-38.00042, lng:-57.5562}, //mar del plata
+        {lat:48.85341, lng: 2.3488}, //paris
+        {lat:-0.22985, lng:-78.52495}, //quito
+        {lat: 46.30991, lng: 11.02307}, //cinque terre italia
+        {lat:-34.61315, lng:-58.37723}, //buenos aires
+        {lat:-32.89084, lng:-68.82717}, //mendoza
+        {lat: 23.634501, lng: -102.552784}, //Mexico
+        {lat:51.51279, lng:-0.09184} //Londres
     ];
     // El mapa centrado en la coordenada principal
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 3,
+      zoom: 2,
       center: center,
     });
 
