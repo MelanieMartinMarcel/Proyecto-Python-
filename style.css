@@ -329,18 +329,46 @@ img {
     margin: 70px auto;
 }
 
-h3{
-    text-align: center;
-    font-size: 25px;
-    margin: 10px;
-}
 
 #map {
     height: 550px;
     width: 100%;
     margin-bottom: 15px;
-  }
+  } 
   
+
+.ciudades__lista{
+    position: absolute;
+    top: 120vh;
+    left: 5vw;
+    bottom: 20vh;
+    font-size: 20px;
+    width: fit-content; /*varia segun texto*/
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+    
+}
+
+.ciudades__lista h3{
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid black ;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.nombres__ciudades{
+    flex: 1;
+    padding: 2rem;
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.5;
+}
     
 /*FOOTER*/
 

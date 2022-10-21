@@ -32,9 +32,11 @@
    <!--REALIZAR MAPA INTERACTIVO -->
     <main id="main">
         <section class="container_map">
-            <h3>LUGARES VISITADOS</h3>
-            <!--El div para el mapa -->
-            <div id="map"></div>
+            <div class="ciudades__lista">
+                <h3>Lugares visitados</h3>
+                <div class="nombres__ciudades" id="nombres__ciudades""></div>
+              </div>
+              <div id="map"></div>
         </section>
     </main>
 <!--FOOTER-->
@@ -54,9 +56,6 @@
 
     
     <script src="menu.js"> </script>
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4ea3ng38OF2ICqqikVYjnI2TmGiHLoL0&callback=initMap&v=weekly"
-    defer
-  ></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4cERksHYvwIAnmDMV4vv_jyxIzDEy6ao&callback=initMap"></script>
 </body>
 </html>
