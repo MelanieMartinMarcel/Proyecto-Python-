@@ -178,4 +178,34 @@ function initMap(){
         return false;
     }
 } 
-  
+
+function validarDescripcion(){
+   const input = document.forms['validationForm']['describe'];
+   
+   if(!input.value){
+      input.style.borderColor= 'red';
+      return false;
+   }else{
+       input.style.borderColor= 'green';
+       return true;
+   }
+} 
+
+function valida_enviar(){
+
+   if (!validarNombre()){
+      document.validationForm.nombre.focus()
+      return 0;
+   }
+   if (!validarEmail()){
+      document.validationForm.email.focus()
+      return 0;
+   }
+   if (!validarDescripcion()){
+      document.validationForm.describe.focus()
+      return 0;
+   }     
+    //el formulario se envia
+
+   document.validationForm.submit();
+}

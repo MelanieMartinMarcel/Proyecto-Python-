@@ -16,7 +16,7 @@
         <!--BARRA DE NAVEGACION-->
 
         <nav class="nav">
-            <div class="logo">EL MUNDO A TRAVES DE NUESTROS OJOS</div>
+            <div class="logo">EL MUNDO A TRAVÉS DE NUESTROS OJOS</div>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="blogdeviaje.html#ancla_blog">Blog de viajes</a></li>
@@ -36,7 +36,7 @@
             <section class="about">
                 <div class="about about__us">
                     <h2>Contáctate con nosotras</h2>        
-                    <form class="container" name="validationForm">
+                    <form class="container" id="formulario" name="validationForm">
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
                             <label for="validation02" class="col-sm-6 col-form-label">Nombre</label>
@@ -100,14 +100,14 @@
                         <div class="col-sm-6 col-form-label">
                             <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino</label>
                             <div class="col">
-                                <textarea class="form-control" type="text" class="form-control is-invalid" rows="5" id="validation02" placeholder="Describe" required></textarea>
+                                <textarea class="form-control" type="text" name="describe" class="form-control is-invalid" rows="5" id="describe_texto" placeholder="Describe"></textarea>
                             </div>    
                         
                         </div>    
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary">Enviar</button>  
+                        <button type="button" class="btn btn-primary" onclick="valida_enviar()">Enviar</button>  
                         </div>
                     </div>   
                 </form>
@@ -127,7 +127,7 @@
             <li class="menu_item">Cookies</li>
             <li class="menu_item">Privacidad</li>
         </ul>
-        <span class="copyright">&copy;EL MUNDO A TRAVES DE NUESTROS OJOS - 2022 | Todos los derechos reservados.</span>
+        <span class="copyright">&copy;EL MUNDO A TRAVÉS DE NUESTROS OJOS - 2022 | Todos los derechos reservados.</span>
     </footer>
 
    
