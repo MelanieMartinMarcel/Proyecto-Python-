@@ -36,7 +36,7 @@
             <section class="about">
                 <div class="about about__us">
                     <h2>Contáctate con nosotras</h2>        
-                    <form class="container" id="formulario" name="validationForm">
+                    <form class="container" id="formulario" method="post" name="validationForm" data-netlify="true" >
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
                             <label for="validation02" class="col-sm-6 col-form-label">Nombre</label>
@@ -73,34 +73,38 @@
                         <div class="col-sm-6 col-form-label">
                         <label for="checkbox"  class="col-sm-6 col-form-label">Te hospedarías en:</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="defaultCheck1" value="Hotel">
+                                <input class="form-check-input" type="checkbox" id="defaultCheck1" name="hospedaje" value="Hotel">
                                 <label class="form-check-label" for="defaultCheck1">Hotel</label>
                             </div>    
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Hostel" onChange="check()">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="hospedaje" value="Hostel" onChange="check()">
                                 <label class="form-check-label" for="inlineCheckbox2">Hostel</label>
                                 <div class="col">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="room" id="option1" value="option1" disabled>
+                                        <input class="form-check-input" type="radio" name="room" id="option1" value="habpriv" disabled>
                                         <label class="form-check-label" for="inlineCheckbox2">Habitación Privada</label>
                                     </div>   
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="room" id="option2" value="option2" disabled>
+                                        <input class="form-check-input" type="radio" name="room" id="option2" value="habcomp" disabled>
                                         <label class="form-check-label" for="inlineCheckbox3">Habitación Compartida</label>
                                     </div>    
                                 </div>    
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="hospedaje" value="camping">
                                 <label class="form-check-label" for="inlineCheckbox3">Camping</label>
-                            </div>                           
+                            </div>    
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="hospedaje" value="departamento">
+                                <label class="form-check-label" for="inlineCheckbox3">Departamento</label>
+                            </div>                       
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
                             <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino</label>
                             <div class="col">
-                                <textarea class="form-control" type="text" name="describe" class="form-control is-invalid" rows="5" id="describe_texto" placeholder="Describe"></textarea>
+                                <textarea class="form-control" type="text" name="Mensaje" class="form-control is-invalid" rows="5" id="describe_texto" placeholder="Describe"></textarea>
                             </div>    
                         
                         </div>    
