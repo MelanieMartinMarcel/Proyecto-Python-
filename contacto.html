@@ -36,20 +36,21 @@
             <section class="about">
                 <div class="about about__us">
                     <h2>Contáctate con nosotras</h2>        
-                    <form class="container" id="formulario"  name="validationForm" data-netlify="true" action="gracias.html" >
+                    
+                    <form class="container" id="formulario"  name="validationForm" data-netlify="true" action="gracias.html" method="get" unsubmit="valida_enviar()">
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
-                            <label for="validation02" class="col-sm-6 col-form-label">Nombre</label>
+                            <label for="validation02" class="col-sm-6 col-form-label">Nombre *</label>
                             <div>
-                                <input type="nombre" class="form-control" name="nombre" placeholder="Ingresa tu nombre" onkeyup="validarNombre()" onblur="validarNombre()">
+                                <input type="nombre" class="form-control" name="nombre" placeholder="Ingresa tu nombre" onkeyup="validarNombre()" onblur="validarNombre()"  required>
                             </div>   
                         </div>
                     </div>
                     <div class="row">
                             <div class="col-sm-6 col-form-label">
-                                <label for="inputEmail3" class="col-sm-6 col-form-label">Email</label>
+                                <label for="inputEmail3" class="col-sm-6 col-form-label">Email *</label>
                                 <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="user-mail" name="email" placeholder="Email" onkeyup="validarEmail()">
+                                    <input type="email" class="form-control" id="user-mail" name="email" placeholder="Email" onkeyup="validarEmail()" required>
                                 </div>
                             </div>
                     </div>    
@@ -102,16 +103,16 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
-                            <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino</label>
+                            <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino *</label>
                             <div class="col">
-                                <textarea class="form-control" type="text" name="Mensaje" class="form-control is-invalid" rows="5" id="describe_texto" placeholder="Describe"></textarea>
+                                <textarea class="form-control" type="text" name="mensaje" class="form-control is-invalid" rows="5" id="describe_texto" placeholder="Describe" required></textarea>
                             </div>    
                         
                         </div>    
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary" onclick="valida_enviar()">Enviar</button>  
+                        <button id="btn" type="submit" class="btn btn-primary">Enviar</button>  
                         </div>
                     </div>   
                 </form>

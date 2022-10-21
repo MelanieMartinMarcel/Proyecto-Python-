@@ -284,15 +284,6 @@ img {
   opacity: 1;
 }
 
-/**RESPONSIVE **/
-
-@media only screen and (max-width: 900px) {
-  .media {
-    width: 70%;
-    height: 70%;
-  }
-}
-
 /** PAGINA: BLOG DE VIAJES **/
 
 .container_blog{
@@ -448,3 +439,20 @@ footer{
     font-weight: bolder;
 
 }
+
+/**RESPONSIVE **/
+    @media only screen and (max-width: 900px) {
+        .media {
+          width: 70%;
+          height: 70%;
+        }
+      
+        .container_blog p{
+          font-size: 15px;
+          color:#000;
+          line-height: 30px;
+          margin: auto 150px;
+          text-align:justify;
+      }
+      }
+      
