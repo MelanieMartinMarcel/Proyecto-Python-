@@ -438,3 +438,13 @@ footer{
     opacity: 0.3;
     text-align: center;
 }
+
+.thank{
+    padding-top: 325px;
+    font-size: 40px;
+    color: black;
+    font-weight: 100;
+    padding-left: 20px;
+    font-weight: bolder;
+
+}
