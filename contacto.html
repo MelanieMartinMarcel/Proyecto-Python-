@@ -57,7 +57,7 @@
                         <div class="col-sm-6 col-form-label">
                             <label for="validation02" class="col-sm-6 col-form-label">País a visitar</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" placeholder="Ingresa el país a visitar">
+                                <input type="text" name="pais" class="form-control" placeholder="Ingresa el país a visitar">
                             </div>    
                         </div>
                     </div>    
@@ -65,7 +65,7 @@
                         <div class="col-sm-6 col-form-label">
                             <label for="inputEmail3"  class="col-sm-6 col-form-label">Ciudad a visitar</label>
                             <div class="col-sm-6-form-input">
-                            <input type="text" class="form-control" placeholder="Ingresa la ciudad a visitar">
+                            <input type="text" name="ciudad" class="form-control" placeholder="Ingresa la ciudad a visitar">
                             </div>   
                         </div>
                     </div>    
@@ -81,11 +81,11 @@
                                 <label class="form-check-label" for="inlineCheckbox2">Hostel</label>
                                 <div class="col">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="room" id="option1" value="habpriv" disabled>
+                                        <input class="form-check-input" type="radio" name="hostel" id="option1" value="habpriv" disabled>
                                         <label class="form-check-label" for="inlineCheckbox2">Habitación Privada</label>
                                     </div>   
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="room" id="option2" value="habcomp" disabled>
+                                        <input class="form-check-input" type="radio" name="hostel" id="option2" value="habcomp" disabled>
                                         <label class="form-check-label" for="inlineCheckbox3">Habitación Compartida</label>
                                     </div>    
                                 </div>    
@@ -111,7 +111,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
-                        <button type="button" class="btn btn-primary" onclick="valida_enviar()">Enviar</button>  
+                        <button type="submit" class="btn btn-primary" onclick="valida_enviar()">Enviar</button>  
                         </div>
                     </div>   
                 </form>
