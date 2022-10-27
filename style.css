@@ -325,6 +325,18 @@ iframe {
     display: block;
 }
 
+.container_blog iframe{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
 /*seccion destinos - mapa*/
 /* Tamaño del elemento div que contiene el mapa */
 
@@ -454,13 +466,13 @@ footer{
           width: 70%;
           height: 70%;
         }
-      
+       
         .container_blog p{
-          font-size: 15px;
-          color:#000;
-          line-height: 30px;
-          margin: auto 150px;
-          text-align:justify;
-      }
+            margin: auto 37px;
+            }
+        .container_blog iframe{
+             padding-top: 0px;
+            }
+        
       }
       
