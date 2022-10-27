@@ -97,10 +97,11 @@ header{
     .menu.active{
         transform: translate(0);
     }
+    .logo{
+        font-size: 20px;
+    }
 }
-.scrol{
-    height: 100px;
-}
+
 
 /***MAIN***/
 
@@ -321,12 +322,32 @@ img {
     display: block;
 }
 
+.container_blog iframe{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 900px){
+    .container_blog p{
+        margin: auto 37px;
+    }
+    .container_blog iframe{
+        padding-top: 0px;
+    }
+}
+
 /*seccion destinos - mapa*/
 /* Tamaño del elemento div que contiene el mapa */
 
 .container_map{
     width: 100%;
-    margin: 70px auto;
+    margin: 10px auto;
 }
 
 
@@ -339,7 +360,7 @@ img {
 
 .ciudades__lista{
     position: absolute;
-    top: 120vh;
+    top: 110vh;
     left: 5vw;
     bottom: 20vh;
     font-size: 20px;
