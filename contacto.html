@@ -16,7 +16,7 @@
         <!--BARRA DE NAVEGACION-->
 
         <nav class="nav">
-            <div class="logo">EL MUNDO A TRAVES DE NUESTROS OJOS</div>
+            <div class="logo">EL MUNDO A TRAVÉS DE NUESTROS OJOS</div>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="blogdeviaje.html#ancla_blog">Blog de viajes</a></li>
@@ -36,20 +36,21 @@
             <section class="about">
                 <div class="about about__us">
                     <h2>Contáctate con nosotras</h2>        
-                    <form class="container" name="validationForm">
+                    
+                    <form class="container" id="formulario"  name="validationForm" data-netlify="true" action="gracias.html" method="get" unsubmit="valida_enviar()">
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
-                            <label for="validation02" class="col-sm-6 col-form-label">Nombre</label>
+                            <label for="validation02" class="col-sm-6 col-form-label">Nombre *</label>
                             <div>
-                                <input type="nombre" class="form-control" name="nombre" placeholder="Ingresa tu nombre" onkeyup="validarNombre()" onblur="validarNombre()">
+                                <input type="nombre" class="form-control" name="nombre" placeholder="Ingresa tu nombre" onkeyup="validarNombre()" onblur="validarNombre()"  required>
                             </div>   
                         </div>
                     </div>
                     <div class="row">
                             <div class="col-sm-6 col-form-label">
-                                <label for="inputEmail3" class="col-sm-6 col-form-label">Email</label>
+                                <label for="inputEmail3" class="col-sm-6 col-form-label">Email *</label>
                                 <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="user-mail" name="email" placeholder="Email" onkeyup="validarEmail()">
+                                    <input type="email" class="form-control" id="user-mail" name="email" placeholder="Email" onkeyup="validarEmail()" required>
                                 </div>
                             </div>
                     </div>    
@@ -57,7 +58,7 @@
                         <div class="col-sm-6 col-form-label">
                             <label for="validation02" class="col-sm-6 col-form-label">País a visitar</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" placeholder="Ingresa el país a visitar">
+                                <input type="text" name="pais" class="form-control" placeholder="Ingresa el país a visitar">
                             </div>    
                         </div>
                     </div>    
@@ -65,7 +66,7 @@
                         <div class="col-sm-6 col-form-label">
                             <label for="inputEmail3"  class="col-sm-6 col-form-label">Ciudad a visitar</label>
                             <div class="col-sm-6-form-input">
-                            <input type="text" class="form-control" placeholder="Ingresa la ciudad a visitar">
+                            <input type="text" name="ciudad" class="form-control" placeholder="Ingresa la ciudad a visitar">
                             </div>   
                         </div>
                     </div>    
@@ -73,41 +74,45 @@
                         <div class="col-sm-6 col-form-label">
                         <label for="checkbox"  class="col-sm-6 col-form-label">Te hospedarías en:</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="defaultCheck1" value="Hotel">
+                                <input class="form-check-input" type="checkbox" id="defaultCheck1" name="hospedaje" value="Hotel">
                                 <label class="form-check-label" for="defaultCheck1">Hotel</label>
                             </div>    
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Hostel" onChange="check()">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="hospedaje" value="Hostel" onChange="check()">
                                 <label class="form-check-label" for="inlineCheckbox2">Hostel</label>
                                 <div class="col">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="room" id="option1" value="option1" disabled>
+                                        <input class="form-check-input" type="radio" name="hostel" id="option1" value="habpriv" disabled>
                                         <label class="form-check-label" for="inlineCheckbox2">Habitación Privada</label>
                                     </div>   
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="room" id="option2" value="option2" disabled>
+                                        <input class="form-check-input" type="radio" name="hostel" id="option2" value="habcomp" disabled>
                                         <label class="form-check-label" for="inlineCheckbox3">Habitación Compartida</label>
                                     </div>    
                                 </div>    
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="hospedaje" value="camping">
                                 <label class="form-check-label" for="inlineCheckbox3">Camping</label>
-                            </div>                           
+                            </div>    
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="hospedaje" value="departamento">
+                                <label class="form-check-label" for="inlineCheckbox3">Departamento</label>
+                            </div>                       
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-form-label">
-                            <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino</label>
+                            <label for="inputNombre" class="col-sm-4 col-form-label">Contanos tus intereses del destino *</label>
                             <div class="col">
-                                <textarea class="form-control" type="text" class="form-control is-invalid" rows="5" id="validation02" placeholder="Describe" required></textarea>
+                                <textarea class="form-control" type="text" name="mensaje" class="form-control is-invalid" rows="5" id="describe_texto" placeholder="Describe" required></textarea>
                             </div>    
                         
                         </div>    
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary">Enviar</button>  
+                        <button id="btn" type="submit" class="btn btn-primary">Enviar</button>  
                         </div>
                     </div>   
                 </form>
@@ -118,16 +123,16 @@
 <!--FOOTER-->
     <footer>
         <div class="container_redes">
-            <a href="https://www.facebook.com/" class="icon"></a>
+            <a href="https://www.facebook.com/profile.php?id=100086731971253" target="_blank" class="icon"></a>
             <a href="https://www.instagram.com/" class="icon"></a>
-            <a href="https://www.twitter.com/" class="icon"></a>
+            <a href="https://www.twitter.com/claudia96446647" target="_blank" class="icon"></a>
         </div>
         <ul class="footer_menu_container">
             <li class="menu_item">Legal</li>
             <li class="menu_item">Cookies</li>
             <li class="menu_item">Privacidad</li>
         </ul>
-        <span class="copyright">&copy;EL MUNDO A TRAVES DE NUESTROS OJOS - 2022 | Todos los derechos reservados.</span>
+        <span class="copyright">&copy;EL MUNDO A TRAVÉS DE NUESTROS OJOS - 2022 | Todos los derechos reservados.</span>
     </footer>
 
    

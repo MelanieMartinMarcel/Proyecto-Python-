@@ -25,7 +25,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
+    padding: 20px;
     transition: all 0.5s ease;
     z-index: 20;
     
@@ -259,6 +259,13 @@ img {
   transition: all ease-in-out 0.5s;
 }
 
+iframe {
+    width: 100%;
+    z-index: -1;
+    margin: auto;
+    transform: scale(1);
+    transition: all ease-in-out 0.5s;
+  }
 .media:hover img {
   transform: scale(1.1);
   filter: blur(2px);
@@ -275,18 +282,14 @@ img {
   transition: all ease-in-out 0.5s;
 }
 
+.detalle_img a{
+    text-decoration: none;
+    color: white;
+}
+
 .media:hover .detalle_img {
   top: 40%;
   opacity: 1;
-}
-
-/**RESPONSIVE **/
-
-@media only screen and (max-width: 900px) {
-  .media {
-    width: 70%;
-    height: 70%;
-  }
 }
 
 /** PAGINA: BLOG DE VIAJES **/
@@ -322,26 +325,6 @@ img {
     display: block;
 }
 
-.container_blog iframe{
-    width: 80%;
-    height: 600px;
-    margin: auto;
-    object-fit: cover;
-    cursor: pointer;
-    display: block;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-@media only screen and (max-width: 900px){
-    .container_blog p{
-        margin: auto 37px;
-    }
-    .container_blog iframe{
-        padding-top: 0px;
-    }
-}
-
 /*seccion destinos - mapa*/
 /* Tamaño del elemento div que contiene el mapa */
 
@@ -356,7 +339,6 @@ img {
     width: 100%;
     margin-bottom: 15px;
   } 
-  
 
 .ciudades__lista{
     position: absolute;
@@ -456,3 +438,29 @@ footer{
     text-align: center;
 }
 
+.thank{
+    padding-top: 325px;
+    font-size: 40px;
+    color: black;
+    font-weight: 100;
+    padding-left: 20px;
+    font-weight: bolder;
+
+}
+
+/**RESPONSIVE **/
+    @media only screen and (max-width: 900px) {
+        .media {
+          width: 70%;
+          height: 70%;
+        }
+      
+        .container_blog p{
+          font-size: 15px;
+          color:#000;
+          line-height: 30px;
+          margin: auto 150px;
+          text-align:justify;
+      }
+      }
+      

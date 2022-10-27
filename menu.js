@@ -157,8 +157,10 @@ function initMap(){
        }
     }
     if (!esValido){
+       document.getElementById("btn").disabled = true;
        input.style.borderColor= 'red';
     }else{
+       document.getElementById("btn").disabled = false;
        input.style.borderColor= 'green';
     }
     return esValido;
@@ -171,11 +173,45 @@ function initMap(){
     var emailValido =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
     if( emailValido.test(caract.value) ){
+        document.getElementById("btn").disabled = false;
         input.style.borderColor= 'green';
         return true;
     }else{
+        document.getElementById("btn").disabled = true;
         input.style.borderColor= 'red';
         return false;
     }
 } 
-  
+
+function validarDescripcion(){
+   const input = document.forms['validationForm']['mensaje'];
+   
+   if(!input.value){
+      document.getElementById("btn").disabled = true;
+      input.style.borderColor= 'red';
+      return false;
+   }else{
+       document.getElementById("btn").disabled = false;
+       input.style.borderColor= 'green';
+       return true;
+   }
+} 
+
+function valida_enviar(){
+var datos_validos = true;
+
+   if (!validarNombre()){
+      document.validationForm.nombre.focus()
+      datos_validos = false;
+   }
+   if (!validarEmail()){
+      document.validationForm.email.focus()
+      datos_validos = false;
+   }
+   if (!validarDescripcion()){
+      document.validationForm.describe.focus()
+      datos_validos = false;
+   }     
+    //el formulario se envia
+   return datos_validos;
+}
