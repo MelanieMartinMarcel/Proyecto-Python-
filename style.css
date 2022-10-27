@@ -258,6 +258,13 @@ img {
   transition: all ease-in-out 0.5s;
 }
 
+iframe {
+    width: 100%;
+    z-index: -1;
+    margin: auto;
+    transform: scale(1);
+    transition: all ease-in-out 0.5s;
+  }
 .media:hover img {
   transform: scale(1.1);
   filter: blur(2px);
@@ -309,6 +316,15 @@ img {
 }
 
 .container_blog img{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+}
+
+.container_blog iframe{
     width: 80%;
     height: 300px;
     margin: auto;
